@@ -83,11 +83,12 @@ document.getElementById('my_file').addEventListener('change', function () {
                 return `${firstItem}{GS}${modifiedString}`;
             }
 
-            // store SNs with {GS} appended in variable
+            // store SNs in variable with {GS} delimiter
             const qrSNS = addGSAndJoin(snArray);
 
             // Add everything together to make the complete QR String format
             cachedCompleteQRString = (qrHeader + qrSNS + "{RS}" + "{EoT}");
+            console.log(cachedCompleteQRString);
 
             // Output the flattened array to the screen
             output.textContent = `Excel Input:${JSON.stringify(flattenedData, null, 2)}`;
@@ -211,7 +212,7 @@ const baseLabelXml = '<?xml version="1.0" encoding="utf-8"?> \
 function printLabel() {
 
     if (!cachedPrinterName || !cachedCompleteQRString) {
-        console.error("Printer or QR String not initialized.");
+        console.error("Printer or QR String not initialized. Verify a printer is connected and the excel file is formatted correctly");
         return;
     }
 

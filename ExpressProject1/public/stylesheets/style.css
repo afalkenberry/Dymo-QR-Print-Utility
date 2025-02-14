@@ -1,5 +1,4 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
@@ -11,8 +10,8 @@ a {
     margin-top: 20px;
 }
 
-h1 {
-    margin-top: 20px;
+.h1 {
+    margin-top: 40px;
 }
 
 #upload-button {
@@ -35,4 +34,16 @@ h1 {
 
 #outputQRString {
     display: none;
+}
+
+#paximg {
+    padding-top: 20px;
+    padding-left:20px;
+    
+}
+
+.img {
+    display:block;
+    width: 15%;
+    height: auto;
 }

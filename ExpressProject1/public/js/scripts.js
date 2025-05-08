@@ -126,6 +126,7 @@ preloadPrinters();
 
 // Check if the printer is available
 checkPrinterAvailability(cachedPrinterName);
+console.log(cachedPrinterName);
 
 // Label xml for qr code
 const baseLabelXml = '<?xml version="1.0" encoding="utf-8"?> \
